@@ -1,0 +1,15 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+django = "==2.1.7"
+requests = "==2.21.0"
+pyquery = "==1.4.0"
+aiohttp = "==3.5.4"
+
+[requires]
+python_version = "3.7"

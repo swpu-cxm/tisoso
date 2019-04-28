@@ -1,0 +1,41 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>题搜搜</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">
+    <script src="{% static 'jquery-3.3.1.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+    <style>
+        .container {
+            margin-top: 150px;
+        }
+
+        body {
+            background: url("{% static '1.jpg' %}");
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row col-md-offset-3">
+        <div class="col-md-offset-1">
+            <h1>题搜搜</h1>
+        </div>
+        <div class="col-lg-8">
+            <form action="" method="get">
+                <div class="input-group">
+
+                    <input type="text" class="form-control" name='question' placeholder="Search for...">
+                    <span class="input-group-btn">
+                    <button class="btn btn-info" type="submit">Go!</button>
+                </span>
+                </div><!-- /input-group -->
+            </form>
+        </div><!-- /.col-lg-6 -->
+
+    </div><!-- /.row -->
+</div>
+</body>
+</html>

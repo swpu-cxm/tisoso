@@ -1,0 +1,76 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>题搜搜</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">
+    <script src="{% static 'jquery-3.3.1.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+</head>
+<body>
+<div class="container" style="margin-top: 20px">
+    <div class="row col-md-offset-2">
+        <div class="col-md-2 label label-info" style="font-size: 20px;text-align: center;">
+            <a href="/index">题搜搜</a>
+        </div>
+        <div class="col-lg-8">
+            <form action="" method="post">
+                {% csrf_token %}
+                <div class="input-group">
+                    <input type="text" class="form-control" name="question" placeholder="Search for...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-info" type="submit">Go!</button>
+                    </span>
+                </div><!-- /input-group -->
+            </form>
+        </div><!-- /.col-lg-6 -->
+    </div><!-- /.row -->
+</div>
+<div style="height: 80px;width: 100%;background-color: #ebebeb;margin-top: 20px">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-1">
+
+                <ul class="pager">
+                    <li class="active"><a href="#engine-1" data-toggle="tab">引擎一</a></li>
+                    <li><a href="#engine-2" data-toggle="tab" style="margin-left: 80px">引擎二</a></li>
+                </ul>
+
+                <!-- Tab panes -->
+
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane active col-md-6 col-md-offset-3" id="engine-1"
+                     style="margin-top: 50px;width: 100%">
+                    {% for message in messages_1 %}
+                        <div class="col-md-10" style="margin-top: 20px">
+                            Question:&nbsp;{{ message.question | safe }}</div>
+                        <div class="col-md-6"
+                             style="margin: 20px 0;border-bottom: 3px solid #b9def0">
+                            {{ message.answer | safe }}
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="tab-pane col-md-6 col-md-offset-3" id="engine-2"
+                     style="margin-top: 50px;width: 100%">
+                    {% for message in messages_2 %}
+                        <div class="col-md-10" style="margin-top: 20px">
+                            Question:&nbsp;{{ message.question | safe }}
+                        </div>
+                        <div class="col-md-10" style="margin-top: 20px">
+                            {{ message.option | safe }}
+                        </div>
+                        <div class="col-md-6" style="margin: 20px 0;border-bottom: 3px solid #b9def0">
+                            <img src="{{ message.answer }}">
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+</body>
+</html>
