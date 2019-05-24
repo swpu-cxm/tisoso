@@ -1,6 +1,8 @@
-# Django+爬虫,实现一个在线题库搜索引擎
+# ~~Django+爬虫,实现一个在线题库搜索引擎~~
+# 置顶:关于本项目,由于官方的接口以及更改,所以第一个引擎已无法使用,第二个引擎效果也不好,所以我也不会再维护这个项目了
+## 如果有兴趣,欢迎查看两个主要文件,里面有我的详细注释,重要的是思路,结果已经没意义了
 ## 环境:Django 2.1.7,aiohttp 3.5.4,,pyquery 1.4.0,requests 2.21.0
-## <font color='red'>声明:本项目仅供个人学习,请勿作商用,如有侵权请联系我删除,请不要让警察叔叔抓走我</font>
+## 声明:本项目仅供个人学习,请勿作商用,如有侵权请联系我删除,请不要让警察叔叔抓走我
 ## 预览图:
 ![image](https://github.com/swpu-cxm/tisoso/blob/master/tss.png)
 ![image](https://github.com/swpu-cxm/tisoso/blob/master/tss2.png)
