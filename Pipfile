@@ -9,7 +9,7 @@ verify_ssl = true
 django = "==2.1.7"
 requests = "==2.21.0"
 pyquery = "==1.4.0"
-aiohttp = "==3.5.4"
+aiohttp = "==3.7.4"
 
 [requires]
 python_version = "3.7"
